@@ -1,0 +1,263 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Mulish", sans-serif;
+  background-color: #8ab4d6;
+}
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: sticky;
+  top: 0;
+  background-color: #6593b9;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  z-index: 10;
+}
+nav {
+  flex: 1;
+  padding-left: 15%;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+#logo {
+  padding-left: 10%;
+  vertical-align: middle;
+}
+nav ul li a {
+  color: #ffffff;
+  font-size: 1rem;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  color: #002e5b;
+}
+
+.toggle-menu {
+  background-color: #002e5b;
+  position: absolute;
+  right: 30px;
+  top: 4.2rem;
+  display: none;
+}
+.toggle-menu ul {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+  width: 10rem;
+  margin: 20px;
+}
+
+.toggle-menu ul li a {
+  width: 100%;
+  height: 3px;
+  color: white;
+  margin-bottom: 4px;
+  transition: all 0.3s ease 0s;
+}
+.toggle-menu ul li a:hover {
+  color: #5c6c7b;
+}
+.fa-solid {
+  font-size: 2rem;
+  color: #002e5b;
+  padding-right: 30px;
+  cursor: pointer;
+}
+.bar,
+.close {
+  display: none;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 80%;
+}
+.contact-section .flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  max-width: 900px;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 40px;
+  padding: 30px 80px 100px 280px;
+  box-shadow: 1px 1px 15px 0 #adadad;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-cont input[type="text"] {
+  padding: 10px 0;
+  border-radius: 10px 10px 0 0;
+  border: unset;
+  border-bottom: solid 1px rgb(90, 174, 196);
+  min-width: 220px;
+  background-color: rgba(255, 255, 255, 0);
+  outline: none;
+}
+
+.input-cont {
+  margin-bottom: 50px;
+}
+
+.input-cont p {
+  color: rgb(173, 173, 173);
+}
+
+.contact-container h1 {
+  max-width: 150px;
+  margin-top: 60px;
+  margin-bottom: 80px;
+}
+
+.input-btn input {
+  background: #8ab4d6;
+  padding: 12px 50px;
+  font-size: 16x;
+  border: unset;
+  color: white;
+  transition: 0.3s;
+}
+.input-btn input:hover {
+  background-color: #5c9ed4;
+}
+
+.contact-side {
+  position: absolute;
+  top: 5rem;
+  left: -2rem;
+  background: white;
+  width: 350px;
+  height: 550px;
+  border-radius: 20px 0 20px 0;
+  box-shadow: 1px 1px 15px 0 #adadad;
+  padding: 80px 0 0 40px;
+  background-image: url("../img/contact-bg.png");
+  background-size: cover;
+}
+#comment {
+  width: 100%;
+}
+@media only screen and (max-width: 980px) {
+  header {
+    padding: 0;
+  }
+
+  #logo {
+    padding-left: 5%;
+  }
+  .bar,
+  input[type="checkbox"] {
+    display: block;
+  }
+
+  #toggle-1:checked ~ .toggle-menu {
+    display: block;
+  }
+  #toggle-1:checked ~ .close {
+    display: block;
+  }
+  #toggle-1:checked ~ .bar {
+    display: none;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    right: 0px;
+    top: 53px;
+    background-color: #002e5b;
+    padding: 0px;
+    z-index: 99;
+  }
+  .contact-container {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 1250px) {
+  .contact-section {
+    flex-direction: column;
+    top: 0rem;
+    left: 0rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-container {
+    padding: 30px 100px 100px 100px;
+  }
+  .contact-side {
+    position: static;
+    margin-top: 1rem;
+    max-width: 700px;
+    width: 100%;
+    height: 350px;
+    padding: 0px 0 0 40px;
+    display: flex;
+    justify-content: center;
+  }
+  .contact-side img {
+    width: 250px;
+  }
+  #comment {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .contact-container {
+    width: 110%;
+    align-items: center;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-container h1 {
+    max-width: 400px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .input-cont input[type="text"] {
+    min-width: 250px;
+  }
+}

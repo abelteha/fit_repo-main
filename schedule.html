@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fit</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/schedule.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main>
+        <header>
+
+            <a href="index.html" id="logo"><img src="img/logo.svg" alt=""></a>
+
+
+            <input type="checkbox" id="toggle-1">
+
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="icon-home"></i>Home</a></li>
+                    <li><a href="index.html#about"><i class="icon-user"></i>About us</a></li>
+                    <li><a href="service.html"><i class="icon-gear"></i>Services</a></li>
+                    <li><a href="schedule.html"><i class="icon-picture"></i>Schedule a Service</a></li>
+                    <li><a href="contact.html"><i class="icon-phone"></i>Contact us</a></li>
+                </ul>
+            </nav>
+            <div class="toggle-menu">
+                <ul>
+                    <li><a href="index.html"><i class="icon-home"></i>Home</a></li>
+                    <li><a href="index.html#about"><i class="icon-user"></i>About us</a></li>
+                    <li><a href="service.html"><i class="icon-gear"></i>Services</a></li>
+                    <li><a href="schedule.html"><i class="icon-picture"></i>Schedule a Service</a></li>
+                    <li><a href="contact.html"><i class="icon-phone"></i>Contact us</a></li>
+                </ul>
+
+            </div>
+            <span class="bar"><i class="fa-solid fa-bars"></i></span>
+            <span class="close"><i class="fa-solid fa-xmark"></i></span>
+
+        </header>
+        <div class="flex-container">
+            <div>
+                <img src="img/schedule.svg" alt="">
+            </div>
+            <form class="schedule-container" name="scheduleForm">
+
+                <div class="form-container">
+                    <div class="input-cont">
+                        <p for="name">Name</p>
+                        <input type="text" name="name" />
+
+                    </div>
+                    <div class="input-cont">
+                        <p for="institute">Institute/ Company</p>
+                        <input type="text" name="company" />
+
+                    </div>
+
+                </div>
+                <div class="form-container">
+                    <div class="input-cont">
+                        <p for="describe">Describe your service!</p>
+                        <input type="text" name="describe" />
+
+                    </div>
+
+                    <div class="input-cont">
+                        <p for="name">Choose a service</p>
+                        <select name="service" id="">
+                            <option value="one">Select service</option>
+                            <option value="two">Consultaion</option>
+                            <option value="three">Ask a Question</option>
+                            <option value="three">Web/App Development</option>
+                            <option value="three">Content Management</option>
+
+                        </select>
+
+                    </div>
+                </div>
+                <div class="calender">
+                    <input type="date" id="date" name="date" min="2022-12-01" max="2023-12-01">
+
+                </div>
+                <div class="input-btn">
+                    <input type="submit" id="submitButton" />
+                </div>
+            </form>
+        </div>
+    </main>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('P-PtbuDWNAydXDV3f')
+    </script>
+
+    <script src="javscript/schedule.js"></script>
+</body>
+
+</html>

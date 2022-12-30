@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fit</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main>
+        <header>
+
+            <a href="index.html" id="logo"><img src="img/logo.svg" alt=""></a>
+
+
+            <input type="checkbox" id="toggle-1">
+
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="icon-home"></i>Home</a></li>
+                    <li><a href="index.html#about"><i class="icon-user"></i>About us</a></li>
+                    <li><a href="service.html"><i class="icon-gear"></i>Services</a></li>
+                    <li><a href="schedule.html"><i class="icon-picture"></i>Schedule a Service</a></li>
+                    <li><a href="contact.html"><i class="icon-phone"></i>Contact us</a></li>
+                </ul>
+            </nav>
+            <div class="toggle-menu">
+                <ul>
+                    <li><a href="index.html"><i class="icon-home"></i>Home</a></li>
+                    <li><a href="index.html#about"><i class="icon-user"></i>About us</a></li>
+                    <li><a href="service.html"><i class="icon-gear"></i>Services</a></li>
+                    <li><a href="schedule.html"><i class="icon-picture"></i>Schedule a Service</a></li>
+                    <li><a href="contact.html"><i class="icon-phone"></i>Contact us</a></li>
+                </ul>
+
+            </div>
+            <span class="bar"><i class="fa-solid fa-bars"></i></span>
+            <span class="close"><i class="fa-solid fa-xmark"></i></span>
+
+        </header>
+        <section class="contact-section">
+            <div class="contact-side"> <img src="./img/contact.svg" width="260" alt="" />
+            </div>
+            <div class="flex-container">
+                <form class="contact-container" name="contactForm">
+                    <h1><span>Send us a</span> Message</h1>
+                    <div class="form-container">
+                        <div class="input-cont">
+                            <input type="text" name="firstName" placeholder="First name" />
+                        </div>
+                        <div class="input-cont">
+                            <input type="text" name="lastName" placeholder="last name" />
+                        </div>
+                    </div>
+                    <div class="form-container">
+                        <div class="input-cont">
+                            <p>Email Address</p>
+                            <input type="text" name="email" placeholder="enter your email here" />
+                        </div>
+                        <div class="input-cont">
+                            <p>Phone</p>
+                            <input type="text" name="phone" placeholder="Enter your phone number here" />
+                        </div>
+                    </div>
+                    <div class="input-cont">
+                        <input type="text" id='comment' name="comment" placeholder="what is it?..." />
+                    </div>
+                    <div class="input-btn">
+                        <input type="submit" value="Send Message" id="SubmitButton" />
+                    </div>
+                </form>
+            </div>
+
+        </section>
+
+
+    </main>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <script type="text/javascript">
+        emailjs.init('P-PtbuDWNAydXDV3f')
+    </script>
+
+    <script src="javscript/contact.js"></script>
+</body>
+
+</html>
